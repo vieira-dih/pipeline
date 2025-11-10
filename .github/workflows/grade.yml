@@ -19,6 +19,13 @@ jobs:
         with:
           python-version: '3.11'
 
+      - name: Debug - Listar arquivos
+        run: |
+          echo "=== PWD ==="
+          pwd
+          echo "=== Listando raiz ==="
+          ls -R .
+
       - name: Add project to PYTHONPATH
         run: |
           echo "PYTHONPATH=$PWD" >> $GITHUB_ENV
